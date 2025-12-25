@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>🎄 Feliz Natal 🎄</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Animate.css local -->
+  <link rel="stylesheet" href="animated.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: url("img/bcgrnd.gif") repeat;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ================= LATERAIS ================= */
+    .side {
+      position: fixed;
+      top: 0;
+      width: 55px;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .left { left: 0; }
+    .right { right: 0; }
+
+    .side-track {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left .side-track {
+      animation: scrollUp 28s linear infinite;
+    }
+
+    .right .side-track {
+      animation: scrollDown 28s linear infinite;
+    }
+
+    .side img {
+      width: 30px;
+      margin: 10px 0;
+    }
+
+    @keyframes scrollUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    @keyframes scrollDown {
+      from { transform: translateY(-50%); }
+      to { transform: translateY(0); }
+    }
+
+    /* ================= CONTEÚDO ================= */
+    .container {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+      padding: 30px 70px;
+      position: relative;
+      z-index: 5;
+    }
+
+    #username {
+      font-family: "SF Espresso Shack", cursive;
+      font-size: 42px;
+      margin: 10px 0;
+      background: linear-gradient(90deg, red, yellow, lime, cyan, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: swing 4s infinite;
+    }
+
+    /* ===== ajuste do desejando você ===== */
+    .wish-wrapper {
+      margin-top: 10px;
+      margin-bottom: -10px;
+    }
+
+    @media (min-width: 768px) {
+      .wish-wrapper {
+        margin-top: -10px;
+        margin-bottom: -25px;
+      }
+    }
+
+    .wish-img {
+      width: 260px;
+      max-width: 90%;
+      margin: 0 auto;
+      animation: pulse 3s infinite;
+    }
+
+    .brazil {
+      width: 75%;
+      max-width: 420px;
+      margin: 20px auto;
+      animation: pulse 4s infinite;
+    }
+
+    .under-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .under-wrapper img {
+      width: 160px;
+      max-width: 45%;
+    }
+
+    .mensagem {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .share-btn {
+      background: #198f19;
+      color: white;
+      border: none;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+      animation: pulse 2s infinite;
+    }
+
+    /* ================= NEVE ================= */
+    .snow {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 14px;
+      user-select: none;
+      pointer-events: none;
+      animation: snowFall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes snowFall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+
+    /* ================= BOTÃO MÚSICA ================= */
+    #musicBtn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: none;
+      background: #c62828;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 600px) {
+      .side { width: 40px; }
+      .container { padding: 20px 55px; }
+      #username { font-size: 32px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- LATERAL ESQUERDA -->
+<div class="side left">
+  <div class="side-track">
+    <img src="img/mc1.webp"><img src="img/mc2.webp"><img src="img/mc3.webp">
+    <img src="img/mc4.webp"><img src="img/mc5.webp"><img src="img/mc6.webp">
+    <img src="img/mc7.webp"><img src="img/mc8.webp"><img src="img/mc9.webp">
+    <img src="img/mc10.webp">
+    <img src="img/mc1.webp"><img src="img/mc2.webp"><img src="img/mc3.webp">
+    <img src="img/mc4.webp"><img src="img/mc5.webp"><img src="img/mc6.webp">
+    <img src="img/mc7.webp"><img src="img/mc8.webp"><img src="img/mc9.webp">
+    <img src="img/mc10.webp">
+  </div>
+</div>
+
+<!-- LATERAL DIREITA -->
+<div class="side right">
+  <div class="side-track">
+    <img src="img/mc1.webp"><img src="img/mc2.webp"><img src="img/mc3.webp">
+    <img src="img/mc4.webp"><img src="img/mc5.webp"><img src="img/mc6.webp">
+    <img src="img/mc7.webp"><img src="img/mc8.webp"><img src="img/mc9.webp">
+    <img src="img/mc10.webp">
+    <img src="img/mc1.webp"><img src="img/mc2.webp"><img src="img/mc3.webp">
+    <img src="img/mc4.webp"><img src="img/mc5.webp"><img src="img/mc6.webp">
+    <img src="img/mc7.webp"><img src="img/mc8.webp"><img src="img/mc9.webp">
+    <img src="img/mc10.webp">
+  </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="container">
+
+  <h1 id="username">DAVI</h1>
+
+  <div class="wish-wrapper">
+    <img src="img/portuguese-wish2.webp" class="wish-img animated fadeInDown">
+  </div>
+
+  <img src="img/brazil1m.webp" class="brazil">
+
+  <div class="under-wrapper">
+    <img src="img/stunder4.webp" class="animated fadeInUp">
+    <img src="img/xmasunder55.webp" class="animated fadeInUp">
+  </div>
+
+  <div class="mensagem animated fadeInUp">
+    🎄 Paz e amor para si nesta época festiva<br>
+    🎁 e em todas as estações do ano que se avizinha<br>
+    🎄 Feliz Natal 🎄<br>
+    🎅 <strong id="assinatura">DAVI</strong> 🎅
+  </div>
+
+  <button class="share-btn" id="shareBtn">👉 Compartilhe com amigos 👈</button>
+</div>
+
+<!-- MÚSICA -->
+<audio id="bgMusic" loop>
+  <source src="img/rt-bells.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn">🔊 Música</button>
+
+<script>
+  /* ===== Nome dinâmico ===== */
+  const params = new URLSearchParams(window.location.search);
+  const nome = (params.get("nome") || "DAVI").toUpperCase();
+  document.getElementById("username").textContent = nome;
+  document.getElementById("assinatura").textContent = nome;
+
+  /* ===== Música ===== */
+  const music = document.getElementById("bgMusic");
+  document.getElementById("musicBtn").onclick = () => {
+    music.play();
+    document.getElementById("musicBtn").style.display = "none";
+  };
+
+  /* ===== Compartilhar WhatsApp ===== */
+  document.getElementById("shareBtn").onclick = () => {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(`🎄 ${nome} te enviou uma mensagem de Natal 🎅✨`);
+    window.open(`https://api.whatsapp.com/send?text=${text}%0A${url}`, "_blank");
+  };
+
+  /* ===== Neve ===== */
+  for (let i = 0; i < 35; i++) {
+    const snow = document.createElement("div");
+    snow.className = "snow";
+    snow.textContent = "❄";
+    snow.style.left = Math.random() * 100 + "vw";
+    snow.style.animationDuration = (6 + Math.random() * 6) + "s";
+    snow.style.opacity = Math.random();
+    snow.style.fontSize = (10 + Math.random() * 10) + "px";
+    document.body.appendChild(snow);
+  }
+</script>
+
+</body>
+</html>
